@@ -1,3 +1,7 @@
 button {
     margin: auto;
 }
+
+#counter {
+    font-size: 34px;
+}
