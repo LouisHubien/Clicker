@@ -1,7 +1,69 @@
-button {
-    margin: auto;
+.bg {
+    background-color: rgb(51, 51, 41);
+}
+
+.button {
+    border:0;
+    background:transparent;
+    padding-top: 5em;
+    padding-bottom: 2em;
+}
+
+.coinclicker {
+    font-family: 'Monofett', cursive;
+    color: rgb(235, 176, 15);
+    font-size: 6em;
+}
+
+header {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(51, 51, 41) 90%);
+    border-radius: 40px;
+    
 }
 
 #counter {
-    font-size: 34px;
+    font-family: 'Baloo Da 2', cursive;
+    color: rgb(255, 209, 82);
+    font-size: 3em;
+    
+}
+
+#updateImage1 {
+    height: 40px;
+}
+
+#updateImage2 {
+    height: 55px;
+    margin-left: 0.2em;
+}
+
+#updateImage3 {
+    height: 60px;
+}
+
+#updateImage4 {
+    height: 40px;
+}
+
+#updateImage5 {
+    height: 50px;
+}
+
+#updateImage1, #updateImage2, #updateImage3, #updateImage4, #updateImage5 {
+    margin-top: 1em;
+}
+
+.descri {
+    background-color: rgb(238, 189, 28);
+    border-radius: 20px;
+    margin-top: 1em;
+}
+
+h3, p {
+    font-family: 'Baloo Da 2', cursive;
+}
+
+h3 {
+    font-weight: bold;
 }
