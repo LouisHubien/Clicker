@@ -11,7 +11,6 @@
     let upgrade5 = document.getElementById("updatePriceButton5");
     let firstUpgrade
     let myAudio = new Audio("audio.mp3/audio1.mp3");
-    console.log(button);
 
     button.addEventListener("click", () => {
         myNumb += myNumbPlus;
@@ -28,15 +27,22 @@
             myNumb += 1
         },1000);
     })
-    /*upgrade3.addEventListener("click", () => {
-        let myTimeout = setTimeout(function {
-            //counter.innerHTML = myNumb;
-            //myNumb += myNumbPlus;
-            //myNumbPlus *=10;
-        //},30000);
-        //clearTimeout(myTimeout);
+    upgrade3.addEventListener("click", () => {
         myAudio.play();
-    })*/
+        setTimeout(() => {
+            myNumbPlus *=10;
+            let myTimer = 30;
+            console.log(myTimer);
+            setInterval(() => {
+                if(myTimer === 0) {
+                    clearInterval();
+                }
+                upgrade3.innerHTML = myTimer;
+                myTimer -= 1;
+            }, 1000)
+        }, 1000)
+        clearTimeout();
+    })
     upgrade4.addEventListener("click", () => {
         myNumbPlus *= 3;
         myAudio.play();
@@ -45,7 +51,7 @@
         myAudio.play();
         setInterval(function () {
             counter.innerHTML = myNumb;
-            myNumb += 99;
+            myNumb += 10;
         }, 1000)
     })
 
