@@ -60,18 +60,5 @@
         }, 1000)
     })
 
-    function upgrade(
-	{
-		if(myNumb >= price)
-		{
-			myNumb -= price;
-			price *= 2;
-			counter.innerHTML.myNumb = myNumb;
-		}
-		else
-		{
-			alert("Not enough cookies!");
-		}
-	})
 
 })();
