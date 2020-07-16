@@ -121,9 +121,9 @@
         }, 1000)
     })
     upgrade4.addEventListener("click", () => {
+        myNumb -= myPrice4;
         myPrice4 *= 2;
         myAudio.play();
-        myNumb -= myPrice4;
         counter.innerHTML = myNumb;
         myNumbPlus *= 3;
         document.getElementById("updatePrice4").innerHTML = myPrice4;
