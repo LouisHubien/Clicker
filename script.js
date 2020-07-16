@@ -60,7 +60,7 @@
         }, 1000)
     })
 
-    upgrade()
+    function upgrade(
 	{
 		if(myNumb >= price)
 		{
@@ -72,6 +72,6 @@
 		{
 			alert("Not enough cookies!");
 		}
-	}
+	})
 
 })();
