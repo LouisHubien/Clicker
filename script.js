@@ -46,6 +46,7 @@
     upgrade4.addEventListener("click", () => {
         myNumbPlus *= 3;
         myAudio.play();
+        price = 1
     })
     upgrade5.addEventListener("click", () => {
         myAudio.play();
@@ -54,5 +55,19 @@
             myNumb += 10;
         }, 1000)
     })
+
+    upgrade()
+	{
+		if(myNumb >= price)
+		{
+			myNumb -= price;
+			price *= 2;
+			counter.innerHTML.myNumb = myNumb;
+		}
+		else
+		{
+			alert("Not enough cookies!");
+		}
+	}
 
 })();
