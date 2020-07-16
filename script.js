@@ -80,7 +80,6 @@
 
     upgrade1.addEventListener("click", () => {
         myNumbPlus *= 2;
-        price = 10;
         myAudio.play();
         myNumb -= myPrice1;
         counter.innerHTML = myNumb;
