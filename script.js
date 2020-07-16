@@ -11,11 +11,14 @@
     let upgrade5 = document.getElementById("updatePriceButton5");
     let firstUpgrade
     let myAudio = new Audio("audio.mp3/audio1.mp3");
-    let myPrice1 = 100;
-    let myPrice2 = 250;
-    let myPrice3 = 500;
-    let myPrice4 = 1000;
-    let myPrice5 = 3000;
+    let myAudio2 = new Audio("audio.mp3/sound2.mp3")
+    let myPrice1 = 50;
+    let myPrice2 = 150;
+    let myPrice3 = 300;
+    let myPrice4 = 500;
+    let myPrice5 = 1000;
+    let myTimer = 30;
+    let myNumbPlus2 = 0;
 
     button.addEventListener("click", () => {
         myNumb += myNumbPlus;
@@ -25,7 +28,14 @@
         if (myNumb < myPrice1) {
             document.getElementById("updatePriceButton1").setAttribute("disabled", "");
             document.getElementById("updatePriceButton1").removeAttribute("enabled", "");
-        } 
+            document.getElementById("updatePriceButton1").addEventListener("click", () => {
+                function myPopup() {
+                    let popup = document.getElementById("updatePriceButton1");
+                    popup.classList.toggle("show");
+                }
+                myPopup();
+            })
+        }
         else if (myNumb >= myPrice1) {
             document.getElementById("updatePriceButton1").setAttribute("enabled", "");
             document.getElementById("updatePriceButton1").removeAttribute("disabled", "");
@@ -33,7 +43,7 @@
         if (myNumb < myPrice2) {
             document.getElementById("updatePriceButton2").setAttribute("disabled", "");
             document.getElementById("updatePriceButton2").removeAttribute("enabled", "");
-        } 
+        }
         else if (myNumb >= myPrice2) {
             document.getElementById("updatePriceButton2").setAttribute("enabled", "");
             document.getElementById("updatePriceButton2").removeAttribute("disabled", "");
@@ -41,7 +51,7 @@
         if (myNumb < myPrice3) {
             document.getElementById("updatePriceButton3").setAttribute("disabled", "");
             document.getElementById("updatePriceButton3").removeAttribute("enabled", "");
-        } 
+        }
         else if (myNumb >= myPrice3) {
             document.getElementById("updatePriceButton3").setAttribute("enabled", "");
             document.getElementById("updatePriceButton3").removeAttribute("disabled", "");
@@ -49,7 +59,7 @@
         if (myNumb < myPrice4) {
             document.getElementById("updatePriceButton4").setAttribute("disabled", "");
             document.getElementById("updatePriceButton4").removeAttribute("enabled", "");
-        } 
+        }
         else if (myNumb >= myPrice4) {
             document.getElementById("updatePriceButton4").setAttribute("enabled", "");
             document.getElementById("updatePriceButton4").removeAttribute("disabled", "");
@@ -57,13 +67,13 @@
         if (myNumb < myPrice5) {
             document.getElementById("updatePriceButton5").setAttribute("disabled", "");
             document.getElementById("updatePriceButton5").removeAttribute("enabled", "");
-        } 
+        }
         else if (myNumb >= myPrice5) {
             document.getElementById("updatePriceButton5").setAttribute("enabled", "");
             document.getElementById("updatePriceButton5").removeAttribute("disabled", "");
         }
     }, 100);
-    
+
     upgrade1.addEventListener("click", () => {
         myNumbPlus *= 2;
         myAudio.play();
@@ -81,26 +91,36 @@
         setInterval(function () {
             counter.innerHTML = myNumb;
             myNumb += 1
-        },1000);
+        }, 1000);
     })
-    /*upgrade3.addEventListener("click", () => {
+    upgrade3.addEventListener("click", () => {
         myAudio.play();
-        setTimeout(() => {
-            myNumbPlus *=10;
-            let myTimer = 30;
-            console.log(myTimer);
-            setInterval(() => {
-                if(myTimer === 0) {
-                    clearInterval();
-                }
-                upgrade3.innerHTML = myTimer;
-                myTimer -= 1;
-            }, 1000)
+        myNumb -= myPrice3;
+        counter.innerHTML = myNumb;
+        myPrice3 *= 2;
+        myNumbPlus2 = myNumbPlus *3;
+        button.addEventListener("click", () => {
+            myNumb += myNumbPlus2;
+            myNumb -= myNumbPlus
+        });
+        
+        let myInt = setInterval(() => {
+            myAudio2.play();
+            document.getElementsByClassName("coinclicker")[0].innerHTML = myTimer;
+            myTimer -= 1;
+            if (myTimer === -1) {
+                clearInterval(myInt);
+                document.getElementsByClassName("coinclicker")[0].innerHTML = "Coin Clicker";
+                button.addEventListener("click", () => {
+                    myNumb += myNumbPlus;
+                    myNumb -= myNumbPlus2;
+                    myTimer = 30
+                });
+            }
         }, 1000)
-        clearTimeout();
-    })*/
+    })
     upgrade4.addEventListener("click", () => {
-        myPrice4 *=2;
+        myPrice4 *= 2;
         myAudio.play();
         myNumb -= myPrice4;
         counter.innerHTML = myNumb;
