@@ -18,10 +18,12 @@
     })
     upgrade1.addEventListener("click", () => {
         myNumbPlus *= 2;
+        price = 10;
         myAudio.play();
     })
     upgrade2.addEventListener("click", () => {
         myAudio.play();
+        price = 100;
         setInterval(function () {
             counter.innerHTML = myNumb;
             myNumb += 1
@@ -31,6 +33,7 @@
         myAudio.play();
         setTimeout(() => {
             myNumbPlus *=10;
+            price = 1000;
             let myTimer = 30;
             console.log(myTimer);
             setInterval(() => {
@@ -46,13 +49,14 @@
     upgrade4.addEventListener("click", () => {
         myNumbPlus *= 3;
         myAudio.play();
-        price = 1
+        price = 5000;
     })
     upgrade5.addEventListener("click", () => {
         myAudio.play();
         setInterval(function () {
             counter.innerHTML = myNumb;
             myNumb += 10;
+            price = 10000;
         }, 1000)
     })
 
