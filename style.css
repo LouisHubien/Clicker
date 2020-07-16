@@ -19,6 +19,23 @@
     from {opacity: 0;}
     to {opacity:1 ;}
 }
+@keyframes littleCoin {
+    from {
+        transform: translateY(-150px);
+    }
+    to {
+        transform: translateY(400px);
+    }
+}
+.coin {
+    width: 200px;
+}
+.littleCoin {
+    width: 30px;
+    z-index: -1;
+    position: absolute;
+    animation: littleCoin 2s forwards ease 2s;
+}
 .popup {
     position: relative;
     display: inline-block;
