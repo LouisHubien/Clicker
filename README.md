@@ -73,4 +73,4 @@ Make it so that, if the player doesn’t have the points to purchase a multiplie
 
 ## Screenshot
 
-![screenshot](images/Screenshot.png) 
+![screenshot](images/screenshot.png) 
