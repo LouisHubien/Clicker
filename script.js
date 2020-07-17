@@ -19,10 +19,71 @@
     let myPrice5 = 1000;
     let myTimer = 30;
     let myNumbPlus2 = 0;
+    let coin0 = document.getElementById("littleCoin0");
+    let coin1 = document.getElementById("littleCoin1");
+    let coin2 = document.getElementById("littleCoin2");
+
+    function myCoin0() {
+        let pos = 270;
+        let id0 = setInterval(frame0, 0.2);
+        function frame0() {
+            if (pos == 640) {
+                clearInterval(id0);
+                coin0.style.top = 270 + "px";
+            }
+            else {
+                pos += 2;
+                coin0.style.top = pos + "px";
+            }
+        }
+    }
+    function myCoin1() {
+        let pos = 270;
+        let id1 = setInterval(frame1, 0.2);
+        function frame1() {
+            if (pos == 640) {
+                clearInterval(id1);
+                coin1.style.top = 270 + "px";
+            }
+            else {
+                pos += 2;
+                coin1.style.top = pos + "px";
+            }
+        }
+    }
+    function myCoin2() {
+        let pos = 270;
+        let id2 = setInterval(frame2, 2);
+        function frame2() {
+            if (pos == 640) {
+                clearInterval(id2);
+                coin2.style.top = 270 + "px";
+            }
+            else {
+                pos += 2;
+                coin2.style.top = pos + "px";
+            }
+        }
+    }
 
     button.addEventListener("click", () => {
         myNumb += myNumbPlus;
         counter.innerHTML = myNumb;
+        let myCone = myNumb%3;
+        
+        
+            if (myCone === 0) {
+                myCoin0();
+                console.log("0");
+            }
+            else if (myCone === 1) {
+                myCoin1();
+                console.log("1");
+            }
+            else if (myCone === 2) {
+                myCoin2();
+                console.log("2");
+            }
     })
     setInterval(() => {
         if (myNumb < myPrice1) {
@@ -115,8 +176,8 @@
                 button.addEventListener("click", () => {
                     myNumb += myNumbPlus;
                     myNumb -= myNumbPlus2;
-                    myTimer = 30
-                });
+                    myTimer = 30;
+                })
             }
         }, 1000)
     })
