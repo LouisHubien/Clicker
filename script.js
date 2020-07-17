@@ -85,8 +85,8 @@
         counter.innerHTML = myNumb;
         myPrice1 *= 3;
         document.getElementById("updatePrice1").innerHTML = myPrice1;
-        document.getElementById("numberOfUpgrade1").innerHTML = numberOfUpgrade1;
         numberOfUpgrade1 += 1;
+        document.getElementById("numberOfUpgrade1").innerHTML = numberOfUpgrade1;
     })
     upgrade2.addEventListener("click", () => {
         myAudio.play();
@@ -135,12 +135,12 @@
         myNumbPlus *= 3;
         numberOfUpgrade4 += 1;
         document.getElementById("updatePrice4").innerHTML = myPrice4;
-        document.getElementById("numberOfUpgrade3").innerHTML = numberOfUpgrade4;
+        document.getElementById("numberOfUpgrade4").innerHTML = numberOfUpgrade4;
     })
     upgrade5.addEventListener("click", () => {
         myAudio.play();
-        myPrice5 *= 2;
         myNumb -= myPrice5;
+        myPrice5 *= 2;
         numberOfUpgrade5 += 1;
         counter.innerHTML = myNumb;
         document.getElementById("updatePrice5").innerHTML = myPrice5;
@@ -148,7 +148,6 @@
         setInterval(function () {
             counter.innerHTML = myNumb;
             myNumb += 10;
-            price = 10000;
         }, 1000)
     })
 
