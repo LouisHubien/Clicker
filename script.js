@@ -1,4 +1,5 @@
 (() => {
+    /* //////////////////////VARIABLES////////////////////////////*/
     let myNumb = 0;
     let myNumbPlus = 1;
     let counter = document.getElementById("counter");
@@ -9,7 +10,6 @@
     let upgrade3 = document.getElementById("updatePriceButton3");
     let upgrade4 = document.getElementById("updatePriceButton4");
     let upgrade5 = document.getElementById("updatePriceButton5");
-    let firstUpgrade
     let myAudio = new Audio("audio.mp3/audio1.mp3");
     let myAudio2 = new Audio("audio.mp3/sound2.mp3")
     let myPrice1 = 50;
@@ -22,6 +22,7 @@
     let coin0 = document.getElementById("littleCoin0");
     let coin1 = document.getElementById("littleCoin1");
     let coin2 = document.getElementById("littleCoin2");
+    /* ///////////////////COIN FALLING FUNCTIONS/////////////////////*/
 
     function myCoin0() {
         let pos = 270;
@@ -72,7 +73,7 @@
     let numberOfUpgrade2 = 0;
     let numberOfUpgrade4 = 0;
     let numberOfUpgrade5 = 0;
-
+/* //////////////////////////////COIN FALL ANIMATION/////////////////////////*/
     button.addEventListener("click", () => {
         myNumb += myNumbPlus;
         counter.innerHTML = myNumb;
@@ -104,6 +105,7 @@
                 myPopup();
             })
         }
+        /*////////////////////////BUTTON ENABLED/DISABLED///////////////////////*/
         else if (myNumb >= myPrice1) {
             document.getElementById("updatePriceButton1").setAttribute("enabled", "");
             document.getElementById("updatePriceButton1").removeAttribute("disabled", "");
@@ -141,7 +143,7 @@
             document.getElementById("updatePriceButton5").removeAttribute("disabled", "");
         }
     }, 100);
-
+/*////////////////////////////////////////UPGRADES//////////////////////////*/
     upgrade1.addEventListener("click", () => {
         myNumbPlus *= 2;
         myAudio.play();
