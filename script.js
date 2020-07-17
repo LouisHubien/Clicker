@@ -29,6 +29,7 @@
         function frame0() {
             if (pos == 450) {
                 clearInterval(id0);
+                coin0.style.Moztop = 270 + "px";
                 coin0.style.top = 270 + "px";
             }
             else {
@@ -43,6 +44,7 @@
         function frame1() {
             if (pos == 450) {
                 clearInterval(id1);
+                coin1.style.Moztop = 270 + "px";
                 coin1.style.top = 270 + "px";
             }
             else {
@@ -57,6 +59,7 @@
         function frame2() {
             if (pos == 450) {
                 clearInterval(id2);
+                coin2.style.Moztop = 270 + "px";
                 coin2.style.top = 270 + "px";
             }
             else {
