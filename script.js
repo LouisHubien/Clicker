@@ -139,8 +139,8 @@
     })
     upgrade5.addEventListener("click", () => {
         myAudio.play();
-        myPrice5 *= 2;
         myNumb -= myPrice5;
+        myPrice5 *= 2;
         numberOfUpgrade5 += 1;
         counter.innerHTML = myNumb;
         document.getElementById("updatePrice5").innerHTML = myPrice5;
@@ -148,7 +148,6 @@
         setInterval(function () {
             counter.innerHTML = myNumb;
             myNumb += 10;
-            price = 10000;
         }, 1000)
     })
 
