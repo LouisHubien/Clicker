@@ -65,6 +65,10 @@
             }
         }
     }
+    let numberOfUpgrade1 = 0;
+    let numberOfUpgrade2 = 0;
+    let numberOfUpgrade4 = 0;
+    let numberOfUpgrade5 = 0;
 
     button.addEventListener("click", () => {
         myNumb += myNumbPlus;
@@ -137,19 +141,22 @@
 
     upgrade1.addEventListener("click", () => {
         myNumbPlus *= 2;
-        price = 10;
         myAudio.play();
         myNumb -= myPrice1;
         counter.innerHTML = myNumb;
         myPrice1 *= 3;
         document.getElementById("updatePrice1").innerHTML = myPrice1;
+        numberOfUpgrade1 += 1;
+        document.getElementById("numberOfUpgrade1").innerHTML = numberOfUpgrade1;
     })
     upgrade2.addEventListener("click", () => {
         myAudio.play();
         myNumb -= myPrice2;
         myPrice2 *= 2;
+        numberOfUpgrade2 += 1;
         counter.innerHTML = myNumb;
         document.getElementById("updatePrice2").innerHTML = myPrice2;
+        document.getElementById("numberOfUpgrade2").innerHTML = numberOfUpgrade2;
         setInterval(function () {
             counter.innerHTML = myNumb;
             myNumb += 1
@@ -187,18 +194,21 @@
         myAudio.play();
         counter.innerHTML = myNumb;
         myNumbPlus *= 3;
+        numberOfUpgrade4 += 1;
         document.getElementById("updatePrice4").innerHTML = myPrice4;
+        document.getElementById("numberOfUpgrade4").innerHTML = numberOfUpgrade4;
     })
     upgrade5.addEventListener("click", () => {
         myAudio.play();
-        myPrice5 *= 2;
         myNumb -= myPrice5;
+        myPrice5 *= 2;
+        numberOfUpgrade5 += 1;
         counter.innerHTML = myNumb;
         document.getElementById("updatePrice5").innerHTML = myPrice5;
+        document.getElementById("numberOfUpgrade5").innerHTML = numberOfUpgrade5;
         setInterval(function () {
             counter.innerHTML = myNumb;
             myNumb += 10;
-            price = 10000;
         }, 1000)
     })
 
