@@ -1,6 +1,6 @@
 @keyframes myAnim {
     0% {
-        transform: scale(1)
+        transform: scale(1);
     }
     25% {
         transform: scale(1.1);
@@ -32,24 +32,36 @@
 }
 #littleCoin0 {
     margin-left: -60px;
+    -moz-margin-left: -60px;
     width: 30px;
     z-index: -1;
+    -moz-z-index: -1;
     position: absolute;
+    -moz-position: absolute;
     margin-top: -100px;
+    -moz-margin-top: -100px;
 }
 #littleCoin1{
     margin-left: -15px;
+    -moz-margin-left: -15px;
     width: 30px;
     z-index: -1;
+    -moz-z-index: -1;
     position: absolute;
+    -moz-position: absolute;
     margin-top: -100px;
+    -moz-margin-top: -100px;
 }
 #littleCoin2 {
-    width: 30px;
     margin-left: 30px;
+    -moz-margin-left: 30px;
+    width: 30px;
     z-index: -1;
+    -moz-z-index: -1;;
     position: absolute;
+    -moz-position: absolute;
     margin-top: -100px;
+    -moz-margin-top: -100px;
 }
 .popup {
     position: relative;

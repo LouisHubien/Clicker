@@ -10,7 +10,6 @@
     let upgrade3 = document.getElementById("updatePriceButton3");
     let upgrade4 = document.getElementById("updatePriceButton4");
     let upgrade5 = document.getElementById("updatePriceButton5");
-    let firstUpgrade
     let myAudio = new Audio("audio.mp3/audio1.mp3");
     let myAudio2 = new Audio("audio.mp3/sound2.mp3")
     let myPrice1 = 50;
