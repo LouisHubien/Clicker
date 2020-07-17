@@ -85,8 +85,8 @@
         counter.innerHTML = myNumb;
         myPrice1 *= 3;
         document.getElementById("updatePrice1").innerHTML = myPrice1;
-        document.getElementById("numberOfUpgrade1").innerHTML = numberOfUpgrade1;
         numberOfUpgrade1 += 1;
+        document.getElementById("numberOfUpgrade1").innerHTML = numberOfUpgrade1;
     })
     upgrade2.addEventListener("click", () => {
         myAudio.play();
@@ -135,7 +135,7 @@
         myNumbPlus *= 3;
         numberOfUpgrade4 += 1;
         document.getElementById("updatePrice4").innerHTML = myPrice4;
-        document.getElementById("numberOfUpgrade3").innerHTML = numberOfUpgrade4;
+        document.getElementById("numberOfUpgrade4").innerHTML = numberOfUpgrade4;
     })
     upgrade5.addEventListener("click", () => {
         myAudio.play();
