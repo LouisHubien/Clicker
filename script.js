@@ -28,7 +28,7 @@
         let pos = 270;
         let id0 = setInterval(frame0, 0.2);
         function frame0() {
-            if (pos == 640) {
+            if (pos == 450) {
                 clearInterval(id0);
                 coin0.style.top = 270 + "px";
             }
@@ -42,7 +42,7 @@
         let pos = 270;
         let id1 = setInterval(frame1, 0.2);
         function frame1() {
-            if (pos == 640) {
+            if (pos == 450) {
                 clearInterval(id1);
                 coin1.style.top = 270 + "px";
             }
@@ -56,7 +56,7 @@
         let pos = 270;
         let id2 = setInterval(frame2, 2);
         function frame2() {
-            if (pos == 640) {
+            if (pos == 450) {
                 clearInterval(id2);
                 coin2.style.top = 270 + "px";
             }
